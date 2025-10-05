@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Access Denied</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff4e50, #f9d423);
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 40px 60px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    a {
+      display: inline-block;
+      margin-top: 25px;
+      text-decoration: none;
+      color: #ff4e50;
+      background: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    a:hover {
+      background: #ff4e50;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Access Denied 🚫</h1>
+    <p>You denied access to your GitHub account.</p>
+    <p>If this was a mistake, you can try logging in again.</p>
+    <a href="{{ url_for('login') }}">🔁 Try Again</a>
+  </div>
+</body>
+</html>
